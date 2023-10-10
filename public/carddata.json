@@ -1,83 +1,52 @@
 [
     {
-      "ID": 1,
+      "id": 1,
       "Name": "Elegant White Roses",
-      "Image": "[Insert Image URL]",
+      "Image": "https://i.ibb.co/wgnNzf7/thea-hdc-XDCe-QYYm-Q3-Y-unsplash.jpg",
       "Price": "$350",
-      "Short Description": "A timeless arrangement of pure white roses, perfect for a classic wedding.",
+      "Short_Description": "A timeless arrangement of pure white roses, perfect for a classic wedding.",
       "Button": "View Details"
     },
     {
-      "ID": 2,
+      "id": 2,
       "Name": "Rustic Barn Venue",
-      "Image": "[Insert Image URL]",
+      "Image": "https://i.ibb.co/8ML6RWN/abby-savage-z-Ns-Swsuy-P3-A-unsplash.jpg",
       "Price": "$2,500",
-      "Short Description": "Charming barn venue with vintage decor, ideal for a rustic-themed wedding.",
+      "Short_Description": "Charming barn venue with vintage decor, ideal for a rustic-themed wedding.",
       "Button": "Learn More"
     },
     {
-      "ID": 3,
+      "id": 3,
       "Name": "Crystal Clear Centerpieces",
-      "Image": "[Insert Image URL]",
+      "Image": "https://i.ibb.co/hgnrYT2/nancy-philip-Mm-P4x9mohp-A-unsplash.jpg",
       "Price": "$60 (per centerpiece)",
-      "Short Description": "Exquisite crystal centerpieces to add sparkle to your reception tables.",
+      "Short_Description": "Exquisite crystal centerpieces to add sparkle to your reception tables.",
       "Button": "Explore Options"
     },
     {
-      "ID": 4,
+      "id": 4,
       "Name": "Bridal Gown Collection",
-      "Image": "[Insert Image URL]",
+      "Image": "https://i.ibb.co/bHhJWvw/nastya-dulhiier-Fq-NEHrx-DFM-unsplash-1.jpg",
       "Price": "Starting at $1,200",
-      "Short Description": "An exquisite collection of bridal gowns to make your special day unforgettable.",
+      "Short_Description": "An exquisite collection of bridal gowns to make your special day unforgettable.",
       "Button": "See Dresses"
     },
     {
-      "ID": 5,
+      "id": 5,
       "Name": "Catering Services",
-      "Image": "[Insert Image URL]",
+      "Image": "https://i.ibb.co/NtCg1xX/luigi-pozzoli-hzqu-Wrc-Aw-Q4-unsplash-1.jpg",
       "Price": "Custom Quote",
-      "Short Description": "Delicious gourmet catering tailored to your tastes and preferences.",
+      "Short_Description": "Delicious gourmet catering tailored to your tastes and preferences.",
       "Button": "Request Quote"
     },
     {
-      "ID": 6,
+      "id": 6,
       "Name": "Photography & Videography",
-      "Image": "[Insert Image URL]",
+      "Image": "https://i.ibb.co/grxjW8r/carosol2.jpg",
       "Price": "Packages from $2,000",
-      "Short Description": "Capture your precious moments with our professional photography and videography services.",
+      "Short_Description": "Capture your precious moments with our professional photography and videography services.",
       "Button": "Book Now"
-    },
-    {
-      "ID": 7,
-      "Name": "Wedding Planner Services",
-      "Image": "[Insert Image URL]",
-      "Price": "Starting at $1,500",
-      "Short Description": "Let our experienced wedding planners turn your dreams into reality.",
-      "Button": "Get Started"
-    },
-    {
-      "ID": 8,
-      "Name": "Floral Decorations",
-      "Image": "[Insert Image URL]",
-      "Price": "Varies",
-      "Short Description": "Elegant floral arrangements to beautify your ceremony and reception.",
-      "Button": "Browse Flowers"
-    },
-    {
-      "ID": 9,
-      "Name": "Live Music & Entertainment",
-      "Image": "[Insert Image URL]",
-      "Price": "Starting at $800",
-      "Short Description": "Entertain your guests with live music and performances.",
-      "Button": "Book Entertainment"
-    },
-    {
-      "ID": 10,
-      "Name": "Wedding Invitations",
-      "Image": "[Insert Image URL]",
-      "Price": "Custom Design",
-      "Short Description": "Unique and personalized wedding invitations to set the tone for your big day.",
-      "Button": "Design Now"
     }
+    
   ]
   

@@ -25,7 +25,7 @@ const navlinks =<>
              }
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">WEDDING <br />MANAGEMENT SYSTEM</a>
+          <a className="btn btn-ghost normal-case text-xl">WEDDING MASTER</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
