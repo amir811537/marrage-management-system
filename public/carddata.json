@@ -1,0 +1,83 @@
+[
+    {
+      "ID": 1,
+      "Name": "Elegant White Roses",
+      "Image": "[Insert Image URL]",
+      "Price": "$350",
+      "Short Description": "A timeless arrangement of pure white roses, perfect for a classic wedding.",
+      "Button": "View Details"
+    },
+    {
+      "ID": 2,
+      "Name": "Rustic Barn Venue",
+      "Image": "[Insert Image URL]",
+      "Price": "$2,500",
+      "Short Description": "Charming barn venue with vintage decor, ideal for a rustic-themed wedding.",
+      "Button": "Learn More"
+    },
+    {
+      "ID": 3,
+      "Name": "Crystal Clear Centerpieces",
+      "Image": "[Insert Image URL]",
+      "Price": "$60 (per centerpiece)",
+      "Short Description": "Exquisite crystal centerpieces to add sparkle to your reception tables.",
+      "Button": "Explore Options"
+    },
+    {
+      "ID": 4,
+      "Name": "Bridal Gown Collection",
+      "Image": "[Insert Image URL]",
+      "Price": "Starting at $1,200",
+      "Short Description": "An exquisite collection of bridal gowns to make your special day unforgettable.",
+      "Button": "See Dresses"
+    },
+    {
+      "ID": 5,
+      "Name": "Catering Services",
+      "Image": "[Insert Image URL]",
+      "Price": "Custom Quote",
+      "Short Description": "Delicious gourmet catering tailored to your tastes and preferences.",
+      "Button": "Request Quote"
+    },
+    {
+      "ID": 6,
+      "Name": "Photography & Videography",
+      "Image": "[Insert Image URL]",
+      "Price": "Packages from $2,000",
+      "Short Description": "Capture your precious moments with our professional photography and videography services.",
+      "Button": "Book Now"
+    },
+    {
+      "ID": 7,
+      "Name": "Wedding Planner Services",
+      "Image": "[Insert Image URL]",
+      "Price": "Starting at $1,500",
+      "Short Description": "Let our experienced wedding planners turn your dreams into reality.",
+      "Button": "Get Started"
+    },
+    {
+      "ID": 8,
+      "Name": "Floral Decorations",
+      "Image": "[Insert Image URL]",
+      "Price": "Varies",
+      "Short Description": "Elegant floral arrangements to beautify your ceremony and reception.",
+      "Button": "Browse Flowers"
+    },
+    {
+      "ID": 9,
+      "Name": "Live Music & Entertainment",
+      "Image": "[Insert Image URL]",
+      "Price": "Starting at $800",
+      "Short Description": "Entertain your guests with live music and performances.",
+      "Button": "Book Entertainment"
+    },
+    {
+      "ID": 10,
+      "Name": "Wedding Invitations",
+      "Image": "[Insert Image URL]",
+      "Price": "Custom Design",
+      "Short Description": "Unique and personalized wedding invitations to set the tone for your big day.",
+      "Button": "Design Now"
+    }
+  ]
+  
