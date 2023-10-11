@@ -1,52 +1,50 @@
 [
-    {
+  {
       "id": 1,
       "Name": "Elegant White Roses",
       "Image": "https://i.ibb.co/wgnNzf7/thea-hdc-XDCe-QYYm-Q3-Y-unsplash.jpg",
       "Price": "$350",
-      "Short_Description": "A timeless arrangement of pure white roses, perfect for a classic wedding.",
+      "Short_Description": "A timeless arrangement of pure white roses, perfect for a classic wedding. These elegant white roses symbolize purity, innocence, and new beginnings, making them a beautiful choice for your special day.",
       "Button": "View Details"
-    },
-    {
+  },
+  {
       "id": 2,
       "Name": "Rustic Barn Venue",
       "Image": "https://i.ibb.co/8ML6RWN/abby-savage-z-Ns-Swsuy-P3-A-unsplash.jpg",
       "Price": "$2,500",
-      "Short_Description": "Charming barn venue with vintage decor, ideal for a rustic-themed wedding.",
+      "Short_Description": "Step into the charm of a rustic barn venue with vintage decor, ideal for a rustic-themed wedding. This picturesque venue offers a rustic ambiance with exposed wooden beams and a cozy, welcoming atmosphere, creating the perfect setting for your celebration.",
       "Button": "Learn More"
-    },
-    {
+  },
+  {
       "id": 3,
       "Name": "Crystal Clear Centerpieces",
       "Image": "https://i.ibb.co/hgnrYT2/nancy-philip-Mm-P4x9mohp-A-unsplash.jpg",
       "Price": "$60 (per centerpiece)",
-      "Short_Description": "Exquisite crystal centerpieces to add sparkle to your reception tables.",
+      "Short_Description": "Exquisite crystal centerpieces that will add a touch of sophistication and sparkle to your reception tables. These crystal centerpieces are designed to make your tables shine with elegance, making your wedding reception a dazzling affair.",
       "Button": "Explore Options"
-    },
-    {
+  },
+  {
       "id": 4,
       "Name": "Bridal Gown Collection",
       "Image": "https://i.ibb.co/bHhJWvw/nastya-dulhiier-Fq-NEHrx-DFM-unsplash-1.jpg",
       "Price": "Starting at $1,200",
-      "Short_Description": "An exquisite collection of bridal gowns to make your special day unforgettable.",
+      "Short_Description": "Explore an exquisite collection of bridal gowns to make your special day unforgettable. Our bridal gowns are crafted with attention to detail, offering a wide range of styles to suit your unique taste and style, ensuring you look breathtaking on your wedding day.",
       "Button": "See Dresses"
-    },
-    {
+  },
+  {
       "id": 5,
       "Name": "Catering Services",
       "Image": "https://i.ibb.co/NtCg1xX/luigi-pozzoli-hzqu-Wrc-Aw-Q4-unsplash-1.jpg",
-      "Price": "Custom Quote",
-      "Short_Description": "Delicious gourmet catering tailored to your tastes and preferences.",
+      "Price": "$1,000",
+      "Short_Description": "Indulge in delicious gourmet catering tailored to your tastes and preferences. Our catering services provide a culinary journey that will delight your senses and leave your guests raving about the delectable dishes served at your wedding.",
       "Button": "Request Quote"
-    },
-    {
+  },
+  {
       "id": 6,
       "Name": "Photography & Videography",
       "Image": "https://i.ibb.co/grxjW8r/carosol2.jpg",
       "Price": "Packages from $2,000",
-      "Short_Description": "Capture your precious moments with our professional photography and videography services.",
+      "Short_Description": "Capture your precious moments with our professional photography and videography services. Our experienced photographers and videographers are dedicated to preserving the beauty and emotions of your special day, ensuring that your memories are cherished for a lifetime.",
       "Button": "Book Now"
-    }
-    
-  ]
-  
+  }
+]

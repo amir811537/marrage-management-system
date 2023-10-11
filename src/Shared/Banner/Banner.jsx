@@ -18,7 +18,7 @@ const Banner = () => {
             className="w-10/12 max-w-screen-xl mx-auto"
           />
           <p className="absolute inset-0 flex items-center justify-center text-white text-2xl bg-black bg-opacity-50">
-            <span className="text-5xl font-bold">
+            <span className="text-xl md:text-3xl lg:text-5xl font-bold">
               Welcoming Wedding Management System
             </span>
           </p>
@@ -31,7 +31,7 @@ const Banner = () => {
           />
           <p className="absolute inset-0 flex items-center justify-center text-white text-2xl bg-black bg-opacity-50">
             {" "}
-            <span className="text-5xl font-bold ">
+            <span className="text-xl md:text-3xl lg:text-5xl font-bold ">
               {" "}
               Management is your passion <br /> don't thought about marriage
             </span>
@@ -44,7 +44,7 @@ const Banner = () => {
             className="w-10/12 max-w-screen-xl mx-auto"
           />
           <p className="absolute inset-0 flex items-center justify-center text-white text-2xl bg-black bg-opacity-50">
-            <span className="text-5xl font-bold ">
+            <span className="text-xl md:text-3xl lg:text-5xl font-bold ">
               Wedding planning software for <br /> event management
               professionals
             </span>

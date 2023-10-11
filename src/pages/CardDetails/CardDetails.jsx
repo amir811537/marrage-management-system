@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
+import Swal from "sweetalert2";
 
 const CardDetails = () => {
   const cards = useLoaderData();
@@ -7,6 +8,22 @@ const CardDetails = () => {
   const idint = parseInt(id);
   const card = cards.find((card) => card.id === idint);
   console.log(card);
+
+
+  const handelbooking=()=>{
+    Swal.fire({
+      title: 'Thanks For Booking',
+      text: card.Name,
+     
+     
+      imageUrl: card.Image,
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    })
+  }
+
+
 
   return (
     <>
@@ -19,7 +36,7 @@ const CardDetails = () => {
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="flex flex-col justify-center p-6"> {/* Use flexbox to center-align text */}
+        <div className="flex flex-col justify-center p-6">
           <h6 className="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
             startups
           </h6>
@@ -29,9 +46,13 @@ const CardDetails = () => {
           <p className="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
             {card.Short_Description}
           </p>
+          <p className="text-xl font-bold "> Price: {card.Price}</p>
           <a className="inline-block" href="#">
-            <button
-              className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+
+<br />
+
+            <button onClick={handelbooking}
+              className=" flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
             >
               Booking Now
