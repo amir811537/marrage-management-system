@@ -5,6 +5,8 @@ import Services from "../pages/services/Services";
 import About from "../pages/about/About";
 import Contactus from "../pages/Contact/Contactus";
 import CardDetails from "../pages/CardDetails/CardDetails";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 const routes=createBrowserRouter([
     {
@@ -29,6 +31,14 @@ const routes=createBrowserRouter([
                 path:'/carddetails/:id',
                 element:<CardDetails></CardDetails>,
                 loader:()=>fetch('/carddata.json')
+            },
+            {
+                path:'/login',
+                element:<Login></Login>,
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             }
         ]
     }
