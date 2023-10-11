@@ -1,7 +1,31 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../Authprovider/Authprovider";
 
 const Login = () => {
+
+
+const {signin}=useContext(AuthContext);
+
+
+
+
+    const handelLogin=e=>{
+        e.preventDefault();
+        const form =new FormData(e.currentTarget);
+             const email=form.get('email')
+        const password= form.get('password')
+        console.log(email,password);
+        signin(email,password)
+        .then(result=>{
+            console.log(result)
+        })
+        .catch(error=>{
+            console.error(error)
+        })
+
+    }
     return (
         <div>
       <Navbar></Navbar>
@@ -13,7 +37,7 @@ const Login = () => {
             </h3>
           </div>
 
-       <form>
+       <form onSubmit={handelLogin}>
 
        <div className="flex flex-col gap-4 p-6">
             <div className="relative h-11 w-full min-w-[200px]">

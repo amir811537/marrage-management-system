@@ -1,8 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../public/assets/user.png'
+import { useContext } from "react";
+import { AuthContext } from "../../Authprovider/Authprovider";
+import { button } from "@material-tailwind/react";
 
 
 const Navbar = () => {
+  const{user,logout}=useContext(AuthContext);
+  const handelsignout =()=>{
+logout()
+.then(result =>{
+  console.log(result)
+})
+.catch(error =>{
+  console.error(error)
+})
+  }
 
 const navlinks =<>
 
@@ -42,7 +55,18 @@ const navlinks =<>
           <img src={logo} />
         </div>
       </label>
-<Link to='/login'> <button>Login</button></Link>
+{
+  user?
+  <button onClick={handelsignout}>Sign Out</button>
+:
+<Link to='/login'>
+   <button>Login</button>
+   </Link>
+
+}
+
+
+
 
         </div>
       </div>
