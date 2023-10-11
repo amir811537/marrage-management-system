@@ -10,6 +10,7 @@ const navlinks =<>
 <li><NavLink to="/services">servics</NavLink></li>
 <li><NavLink to="/about">About</NavLink></li>
 <li><NavLink to="/contactus">Contact Us</NavLink></li>
+<li><NavLink to="/register">Register Now</NavLink></li>
 
 </>
 
@@ -41,7 +42,7 @@ const navlinks =<>
           <img src={logo} />
         </div>
       </label>
-<Link> <button>Login</button></Link>
+<Link to='/login'> <button>Login</button></Link>
 
         </div>
       </div>
