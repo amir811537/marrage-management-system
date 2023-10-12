@@ -17,6 +17,8 @@ const Login = () => {
         showConfirmButton: false,
         timer: 3000,
       });
+      navigate(location?.state ? location.state : "/");
+
     });
 };
 
