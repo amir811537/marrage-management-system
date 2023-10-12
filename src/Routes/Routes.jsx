@@ -7,20 +7,20 @@ import Contactus from "../pages/Contact/Contactus";
 import CardDetails from "../pages/CardDetails/CardDetails";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import Privateroute from "../privateroute/privateroute";
+import Errorpage from "../pages/Errorpage/Errorpage";
 
 const routes=createBrowserRouter([
     {
         path:'/',
         element:<MainLayout></MainLayout>,
+        errorElement:<Errorpage></Errorpage>,
         children:[
             {
                 path:"/",
                 element:<Home></Home>,
             },
             {
-                path:'/services',
-                element:<Services></Services>
-            },{
                 path:'/about',
                 element:<About></About>
             },{
@@ -29,7 +29,7 @@ const routes=createBrowserRouter([
             },
             {
                 path:'/carddetails/:id',
-                element:<CardDetails></CardDetails>,
+                element:<Privateroute><CardDetails></CardDetails></Privateroute>,
                 loader:()=>fetch('/carddata.json')
             },
             {

@@ -1,10 +1,20 @@
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
-import { useContext } from "react";
 import { AuthContext } from "../../Authprovider/Authprovider";
+import Swal from "sweetalert2";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { signuprg,createUser } = useContext(AuthContext);
+
+
+
+
+  const validatePassword = (password) => {
+    // Password must be at least 6 characters long and contain at least 1 capital letter
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}$/;
+        return passwordRegex.test(password);
+  };
 
   const handelRegister = (e) => {
     e.preventDefault();
@@ -12,23 +22,41 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     const name = form.get("name");
-    console.log(email, password, name);
 
-    // create user:
+    if (!validatePassword(password)) {
+      Swal.fire({
+        icon: "error",
+        title: "Password validation failed",
+        text: "Password must be at least 6 characters long and contain at least 1 capital letter & special character",
+        showConfirmButton: false,
+        timer: 3000,
+      });
+      return;
+    }
+
     createUser(email, password)
       .then((result) => {
         console.log(result);
+        Swal.fire({
+          icon: "success",
+          title: "Registration successful",
+          showConfirmButton: false,
+          timer: 3000,
+        });
       })
       .catch((error) => {
         console.error(error);
       });
   };
 
+  
+
+
   return (
     <div>
       <Navbar></Navbar>
       <div className="my-14">
-        <div className="relative flex lg:w-1/2 md:w-3/4 mx-auto flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative flex lg:w-1/2 md:w-3/4 mx-auto flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
           <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
             <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
               Register
@@ -119,8 +147,11 @@ const Register = () => {
                 type="submit"
                 data-ripple-light="true"
               >
-                Sign In
+                Rigister Now
               </button>
+
+
+
               <p className="mt-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">
                 Already have an account?
                 <Link className="text-pink-500 font-bold " to="/login">

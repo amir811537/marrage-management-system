@@ -1,36 +1,83 @@
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
-import { useContext } from "react";
 import { AuthContext } from "../../Authprovider/Authprovider";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const { googleSignin,signin } = useContext(AuthContext);
 
 
-const {signin}=useContext(AuthContext);
+  const handelGoogle = () => {
+    googleSignin().then((result) => {
+      console.log(result);
+      Swal.fire({
+        icon: "success",
+        title: "Login success",
+        showConfirmButton: false,
+        timer: 3000,
+      });
+    });
+};
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const validatePassword = (password) => {
+    // Password must be at least 6 characters long and contain at least 1 capital letter
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}$/;
+        return passwordRegex.test(password);
+  };
 
 
 
 
-    const handelLogin=e=>{
-        e.preventDefault();
-        const form =new FormData(e.currentTarget);
-             const email=form.get('email')
-        const password= form.get('password')
-        console.log(email,password);
-        signin(email,password)
-        .then(result=>{
-            console.log(result)
-        })
-        .catch(error=>{
-            console.error(error)
-        })
+  const handelLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
 
+    if (!validatePassword(password)) {
+      Swal.fire({
+        icon: "error",
+        title: "Password validation failed",
+        text: "Password must be at least 6 characters long and contain at least 1 capital letter & special character",
+        showConfirmButton: false,
+        timer: 3000,
+      });
+      return;
     }
-    return (
-        <div>
+
+    signin(email, password)
+      .then((result) => {
+        console.log(result);
+        Swal.fire({
+          icon: "success",
+          title: "Login success",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+
+        // navigate after log in
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+        Swal.fire({
+          icon: "error",
+          title: "Email or password does not match",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+      });
+  };
+
+  return (
+    <div>
       <Navbar></Navbar>
       <div className="my-14">
-        <div className="relative flex lg:w-1/2 md:w-3/4 mx-auto flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative flex lg:w-1/2 md:w-3/4 mx-auto flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
           <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
             <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
               Sign In
@@ -93,6 +140,7 @@ const {signin}=useContext(AuthContext);
                 >
                   Remember Me
                 </label>
+                
               </div>
             </div>
           </div>
@@ -106,16 +154,23 @@ const {signin}=useContext(AuthContext);
             >
               Sign In
             </button>
+
+            <button className="block mx-auto my-3 select-none rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" onClick={handelGoogle} >Google Login</button>
+
+
             <p className="mt-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">
               Don't have an account?
             <Link className="font-bold text-pink-500" to="/register">Register please!!</Link>
             </p>
           </div>
           </form>
+
+
+          
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Login;

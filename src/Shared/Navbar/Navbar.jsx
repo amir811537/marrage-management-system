@@ -2,7 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../../../public/assets/user.png'
 import { useContext } from "react";
 import { AuthContext } from "../../Authprovider/Authprovider";
-import { button } from "@material-tailwind/react";
 
 
 const Navbar = () => {
@@ -20,9 +19,9 @@ logout()
 const navlinks =<>
 
 <li><NavLink to="/">Home</NavLink></li>
-<li><NavLink to="/services">servics</NavLink></li>
-<li><NavLink to="/about">About</NavLink></li>
 <li><NavLink to="/contactus">Contact Us</NavLink></li>
+<li><NavLink to="/about">About</NavLink></li>
+<li><NavLink to="/login">Login</NavLink></li>
 <li><NavLink to="/register">Register Now</NavLink></li>
 
 </>

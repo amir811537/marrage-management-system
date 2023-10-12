@@ -4,8 +4,9 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log(import.meta.env.VITE_APIKEY)
 const firebaseConfig = {
-  apiKey: "AIzaSyBy6xK7vX3mWgHOwgKdK_KaHQ7C_qwxKUA",
+  apiKey: import.meta.env.VITE_APIKEY,
   authDomain: "event-managementsystem-auth.firebaseapp.com",
   projectId: "event-managementsystem-auth",
   storageBucket: "event-managementsystem-auth.appspot.com",
